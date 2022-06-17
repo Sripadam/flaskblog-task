@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Edit Page</title>
+{% endblock%}
+
+{% block body %}
+<h1>Editing Post: </h1>
+<hr>
+<h2>Edit:</h2>
+
+<form action="" method="POST">
+    <label for="content">Title:</label>
+    <input class="form-control" type="text" name="title" id="title" value="{{request.form['title']}}">
+    <br>
+    <label for="content">Author:</label>
+    <input class="form-control" type="text" name="author" id="author" value="{{request.form['Author']}}">
+    <br>
+    <label for="post">Post:</label>
+    <textarea class="form-control" id="post" name="post" rows="3">{{request.form['post']}}</textarea>
+    <br>
+    <input type="submit" class="btn btn-primary" value="Save">
+</form>
+<a style="display: inline" class="btn btn-success float-right" href="/posts">Back</a>
+<hr>
+{% endblock%}

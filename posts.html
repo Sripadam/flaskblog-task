@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Posts Page </title>
+{% endblock%}
+
+{% block body %}
+<br>
+    <div>
+        <h1 style="display: inline">All Posts Here: </h1>
+        <a style="display: inline" class="btn btn-success float-right" href="/posts/new">+ New Post</a>
+    </div>
+    <br>
+    <hr>
+    {% for post in posts%}
+    <h2>{{post[2]}}</h2>
+
+   
+    <small>Written By {{post[3]}} on {{post[4]}}</small>
+    
+    
+    
+    <p style="white-space: pre-wrap">{{post[1]}}</p>
+    <br>
+    <a href="/posts/delete/{{post[0]}}"><img
+            src="https://qph.fs.quoracdn.net/main-qimg-83c6de25ed91d13a4f09fb5f11ca8853" height="50px" width="50px"></a>
+    <a href="/posts/edit/{{post[0]}}"><img
+            src="https://www.2g-eng.com/wp-content/uploads/2016/01/design-engineering-icon-small.png" height="50px"
+            width="50px"></a>
+    <a style="display: inline" class="btn btn-danger float-right" href="/posts/subscribe">subscribe</a>
+    <hr>
+
+    {% endfor %}
+
+{% endblock%}

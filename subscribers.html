@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>New Post</title>
+{% endblock%}
+
+{% block body %}
+<h1>New Post:</h1>
+<hr>
+<h2>New Post:</h2>
+<form action="" method="POST">
+    <label for="username">username:</label>
+    <input class="form-control" type="text" name="username" id="username" placeholder="Enter username" required/>
+    <br>
+    <label for="email">Email:</label>
+    <input class="form-control" type="email" name="Email" id="email" placeholder="Enter Email"
+        required/>
+    <br>
+   
+    <input type="submit" class="btn btn-primary" value="subscribe">
+</form>
+<hr>
+{% endblock%}
